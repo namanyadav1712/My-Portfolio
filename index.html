@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naman Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#e8f5ff;
+      --card:#ffffff;
+      --muted:#4b6b7a;
+      --accent:#0a3d62;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background:var(--bg);
+      color:var(--accent);
+      line-height:1.6;
+    }
+    .wrapper{max-width:900px;margin:48px auto;padding:28px;}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px;}
+    .brand{font-size:1.5rem;font-weight:700;color:#06304a;}
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-size:0.95rem;}
+
+    .hero{background:linear-gradient(180deg, #ffffffcc, #ffffffee);border-radius:var(--radius);padding:28px;box-shadow:0 6px 18px rgba(10,61,98,0.15);display:flex;gap:24px;align-items:center;}
+    .avatar{width:110px;height:110px;border-radius:50%;object-fit:cover;box-shadow:0 6px 14px rgba(10,61,98,0.15);} 
+
+    .intro h1{margin:0 0 6px 0;font-size:1.6rem;}
+    .intro p{margin:0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:20px;}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(10,61,98,0.12);} 
+
+    .projects-list{display:flex;flex-direction:column;gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, #f0f8ff, #e6f3ff);border:1px solid #d4e7f7;}
+    .project h3{margin:0 0 6px 0;font-size:1rem;color:#0a3d62}
+    .project p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    .contact-item{margin-bottom:12px;color:var(--muted)}
+    .contact-link{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#eef7ff;border-radius:8px;text-decoration:none;color:var(--accent);font-weight:600;border:1px solid #dcecff;transition:0.2s;}
+    .contact-link:hover{background:#d9ecff;}
+
+    .list-icon{margin-right:8px;color:#0a3d62;}
+
+    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:0.9rem}
+
+    @media (max-width:880px){.grid{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start}nav{margin-top:10px}}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="brand"><i class="fa-solid fa-user"></i> Naman Yadav</div>
+      <nav>
+        <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
+        <a href="#projects"><i class="fa-solid fa-code"></i> Projects</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero card">
+      <img src="naman.jpg" alt="Naman" class="avatar">
+      <div class="intro">
+        <h1>Hi — I'm Naman.</h1>
+        <p class="small">A student and developer who likes clean code, elegant UI, and thoughtful design.</p>
+      </div>
+    </section>
+
+    <div class="grid">
+      <main>
+        <section id="about" class="card">
+          <h2 style="margin-top:0"><i class="fa-solid fa-user-pen"></i> About Me</h2>
+          <p>Hi! I am Naman Yadav, pursuing B.Tech from Delhi Technological University (DTU) in Computer Science. I belong to Rajasthan but currently living in Delhi. I build simple, reliable web projects and learn new tech fast. I'm focused on clarity and polish — not flashy effects. Outside coding I enjoy problem‑solving, reading, and tinkering with hardware projects.</p>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:16px">
+          <h2 style="margin-top:0"><i class="fa-solid fa-diagram-project"></i> Selected Projects</h2>
+          <div class="projects-list">
+            <div class="project">
+              <h3><i class="fa-solid fa-globe"></i> Portfolio Website</h3>
+              <p>Responsive single-page site built with HTML & CSS.</p>
+            </div>
+            <div class="project">
+              <h3><i class="fa-solid fa-database"></i> Student Record Management in C</h3>
+              <p>
+                <ul>
+                  <li><i class="fa-solid fa-check list-icon"></i>Takes student details</li>
+                  <li><i class="fa-solid fa-check list-icon"></i>Stores them using structures</li>
+                  <li><i class="fa-solid fa-check list-icon"></i>Displays all records</li>
+                </ul>
+              </p>
+            </div>
+            <div class="project">
+              <h3><i class="fa-solid fa-list-check"></i> To‑Do List Website</h3>
+              <p>Created using HTML + CSS + Basic JavaScript<br>
+                <ul>
+                  <li><i class="fa-solid fa-check list-icon"></i>Task input box</li>
+                  <li><i class="fa-solid fa-check list-icon"></i>Styled task list</li>
+                  <li><i class="fa-solid fa-check list-icon"></i>Add/Delete buttons</li>
+                  <li><i class="fa-solid fa-check list-icon"></i>Attractive card layout</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <div class="card" id="contact">
+          <h3 style="margin-top:0"><i class="fa-solid fa-address-book"></i> Contact</h3>
+          <a class="contact-link" href="mailto:namanyadav1712@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a class="contact-link" href="https://github.com/namanyadav1712" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="contact-link" href="https://www.linkedin.com/in/naman-yadav-5b1851377/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3 style="margin-top:0"><i class="fa-solid fa-star"></i> Skills</h3>
+          <ul>
+            <li><i class="fa-solid fa-code list-icon"></i>HTML</li>
+            <li><i class="fa-solid fa-code list-icon"></i>CSS</li>
+            <li><i class="fa-solid fa-code list-icon"></i>Python</li>
+            <li><i class="fa-solid fa-code list-icon"></i>C</li>
+            <li><i class="fa-solid fa-code list-icon"></i>C++</li>
+            <li><i class="fa-solid fa-code list-icon"></i>JavaScript</li>
+          </ul>
+
+          <h3><i class="fa-solid fa-trophy"></i> Achievements</h3>
+          <ul>
+            <li><i class="fa-solid fa-medal list-icon"></i>Cleared JEE Mains and Adv</li>
+            <li><i class="fa-solid fa-medal list-icon"></i>12th — 95.2%</li>
+            <li><i class="fa-solid fa-medal list-icon"></i>10th — 98%</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © 2025 Naman — Crafted with care.
+    </footer>
+  </div>
+</body>
+</html>
